@@ -3,7 +3,7 @@ module CustomerSubscriptionHelper
 
   class_methods do
     def subscription_finder(customer_subscription)
-      Subscription.find(customer_subscription.subscription_id)
+      customer_subscription.subscription
     end
   end
-end 
+end
