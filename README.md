@@ -1,5 +1,9 @@
 # Tea Subscription
 
+Back End REST API for a tea subscription service.
+
+![Screen Shot 2022-04-21 at 11 44 13 PM](https://user-images.githubusercontent.com/88950699/164604853-966eb0a1-db6f-49e4-9b4b-fdaa02fc6bc1.png)
+
 Skip to section: 
 <details>
   <summary> Installation </summary>
