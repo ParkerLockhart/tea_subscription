@@ -186,8 +186,10 @@ Example response:
 
 <details>
   <summary> 422 Unprocessable Entity </summary>
+  ```
   
 {
     "errors": "Unable to update customer subscription status. Status can only be 'active', 'paused', or 'cancelled'."
 }
+  ```
 </details>
