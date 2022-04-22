@@ -17,4 +17,18 @@ class Api::V1::CustomerSubscriptionsController < ApplicationController
     end
   end
 
+  def update
+
+    if customer_subscription = CustomerSubscription.where(customer_id: params[:id]).where(subscription_id: params[:subscription_id]).first
+      if params[:status] == "cancelled" || params[:status] == "paused" || params[:status] == "active"
+        customer_subscription.update(status: params[:status])
+        render json: CustomerSubscriptionSerializer.new(customer_subscription)
+      else
+        render json: { errors: "Unable to update customer subscription status. Status can only be 'active', 'paused', or 'cancelled'." }, status: :unprocessable_entity
+      end   
+    else
+      raise ActiveRecord::RecordNotFound
+    end
+  end
+
 end
